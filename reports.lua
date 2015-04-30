@@ -23,8 +23,8 @@ local reports = {
 				COUNT(*) AS Salvages,
 				SUM(SalvageEcto) AS SalvageEcto,
 				SUM(SalvageDark) AS SalvageDark,
-				SUM(SalvageEcto) / SUM(1) AS EctoRate,
-				SUM(SalvageDark) / SUM(1) AS DarkRate
+				ROUND(SUM(SalvageEcto) / SUM(1),2) AS EctoRate,
+				ROUND(SUM(SalvageDark) / SUM(1),2) AS DarkRate
 			FROM salvages S
 			LEFT JOIN tiers T ON S.TierID = T.TierID
 			GROUP BY S.TierID
@@ -42,8 +42,8 @@ local reports = {
 			"Total",
 			"Ecto #",
 			"Dark #",
-			"Ecto %",
-			"Dark %"
+			"Ecto/Item",
+			"Dark/Item"
 		}
 	}
 }

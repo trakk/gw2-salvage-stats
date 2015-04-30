@@ -25,12 +25,12 @@ A = {
 display = {
 	DarkRate = {
 		align = A.RIGHT,
-		left = 6,
+		left = 9,
 		right = 0
 	},
 	EctoRate = {
 		align = A.RIGHT,
-		left = 6,
+		left = 9,
 		right = 0
 	},
 	SalvageID = {
