@@ -1,0 +1,3 @@
+#!/bin/sh
+
+luajit gw2ss.lua
