@@ -14,7 +14,7 @@
 -- You should have received a copy of the GNU Affero General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-local title = "gw2ss: simple tracking & reporting of GW2 salvage rates (v1.1.5)"
+local title = "gw2ss: simple tracking & reporting of GW2 salvage rates (v1.1.6)"
 local sep_s = "================================================================"
 
 require "config"
