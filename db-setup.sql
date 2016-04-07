@@ -13,14 +13,12 @@
 -- You should have received a copy of the GNU Affero General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-DROP DATABASE IF EXISTS gw2ss;
-CREATE DATABASE gw2ss;
+CREATE DATABASE IF NOT EXISTS gw2ss;
 USE gw2ss;
 
 
 -- individual salvage events
-DROP TABLE IF EXISTS salvages;
-CREATE TABLE salvages (
+CREATE TABLE IF NOT EXISTS salvages (
 	SalvageID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	SalvageDate DATE NOT NULL DEFAULT 0,
 	TierID INT NOT NULL,
@@ -30,12 +28,11 @@ CREATE TABLE salvages (
 
 
 -- item tiers
-DROP TABLE IF EXISTS tiers;
-CREATE TABLE tiers (
+CREATE TABLE IF NOT EXISTS tiers (
 	TierID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	TierName VARCHAR(128) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB;
 
-INSERT INTO tiers (`TierID`,`TierName`) VALUES
+INSERT IGNORE INTO tiers (`TierID`,`TierName`) VALUES
 	(1,'Exotic'),
 	(2,'Rare');

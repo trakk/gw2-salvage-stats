@@ -13,7 +13,7 @@
 -- You should have received a copy of the GNU Affero General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-local config = {
+config = {
 	database = "gw2ss",
 	user = "gw2ss",
 	pass = "pass",
